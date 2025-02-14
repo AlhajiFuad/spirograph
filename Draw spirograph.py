@@ -26,14 +26,20 @@ def draw_spirograph(size, radius):
         hajj.circle(radius)
         hajj.setheading(hajj.heading() + size)
 
+def setup_screen():
+    """Set up the turtle screen for spirograph visualization."""
+    screen = turtle.Screen()
+    screen.bgcolor("black")  # Enhances the visual effect
+    screen.exitonclick()
+    return screen
+
 if __name__ == "__main__":
     # Customize spirograph parameters
-    spirograph_size = 5  # Angle increment in degrees
-    spirograph_radius = 108  # Circle radius
+    spirograph_size = 7  # Angle increment in degrees
+    spirograph_radius = 120  # Circle radius
 
     # Draw the spirograph
     draw_spirograph(spirograph_size, spirograph_radius)
 
-    # Exit on click
-    screen = turtle.Screen()
-    screen.exitonclick()
+    # Set up and run the screen
+    setup_screen()
